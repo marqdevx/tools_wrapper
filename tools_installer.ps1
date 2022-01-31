@@ -32,7 +32,7 @@ else{
 
 $Form                            = New-Object system.Windows.Forms.Form
 $Form.ClientSize                 = New-Object System.Drawing.Point(400,400)
-$Form.text                       = "Windows Toolbox By Chris Titus"
+$Form.text                       = "Tools & Programs installer"
 $Form.StartPosition              = "CenterScreen"
 $Form.TopMost                    = $false
 $Form.BackColor                  = [System.Drawing.ColorTranslator]::FromHtml("#658fa0")
