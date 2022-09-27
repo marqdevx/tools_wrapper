@@ -13,3 +13,7 @@ iwr -useb https://raw.githubusercontent.com/marqdevx/tools_wrapper/main/tools_in
 ```
 
 Original script https://github.com/ChrisTitusTech/win10script
+
+## Preview
+
+![](assets/screenshot.png)
