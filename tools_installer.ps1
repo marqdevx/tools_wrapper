@@ -88,16 +88,16 @@ $Panel3.controls.AddRange(@($yourphonefix,$Label6,$windowsupdatefix,$ncpa,$oldco
 $python.Add_Click({
     Write-Host "Installing Python"
     $ResultText.text = "`r`n" +"`r`n" + "Installing Python... Please Wait" 
-    winget install Python.Python.3 | Out-Host
+    winget install Python.Python.3.10 | Out-Host
     if($?) { Write-Host "Installed Python" }
     $ResultText.text = "`r`n" + "Finished Installing Python" + "`r`n" + "`r`n" + "Ready for Next Task"
 })
 
 $pip.Add_Click({
     Write-Host "Checking if its already installed"
-     py -m ensurepip --upgrade
-            if($?) { Write-Host "Installed pip" }
-            $ResultText.text = "`r`n" + "Finished Installing pip" + "`r`n" + "`r`n" + "Ready for Next Task"
+    py -m ensurepip --upgrade
+    if($?) { Write-Host "Installed pip" }
+    $ResultText.text = "`r`n" + "Finished Installing pip" + "`r`n" + "`r`n" + "Ready for Next Task"
     if(Get-Command py){
         if(Get-Command pip){ç
             Write-Host "Already installed"
@@ -113,7 +113,6 @@ $pip.Add_Click({
 
 $codespell.Add_Click({
     Write-Host "Spell-check installation"
-    py -m pip install --upgrade pip
     pip install codespell
     if($?) { Write-Host "Installed codespell" }
 })
@@ -121,7 +120,7 @@ $codespell.Add_Click({
 $nodejs.Add_Click({
     Write-Host "Installing NodeJs & npm version manager"
     $ResultText.text = "`r`n" +"`r`n" + "Installing NodeJs & npm version manager... Please Wait" 
-    winget install -e --id Nodist.Nodist | Out-Host
+    winget install -e --id OpenJS.NodeJS | Out-Host
     Write-Host "Installed NodeJs & npm version manager"
     $ResultText.text = "`r`n" + "Finished Installing NodeJs & npm version manager" + "`r`n" + "`r`n" + "Ready for Next Task"
 })
